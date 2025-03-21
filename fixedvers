@@ -1,0 +1,19 @@
+<!-- fixed.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed XSS Example</title>
+</head>
+<body>
+    <h1>Fixed XSS Example</h1>
+    <p>Enter your message:</p>
+    <form method="GET">
+        <input type="text" name="message">
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Your message: <?php echo htmlspecialchars($_GET['message']); ?></p> <!-- Fixed XSS -->
+</body>
+</html>
