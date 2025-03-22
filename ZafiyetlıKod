@@ -71,9 +71,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>XSS Zafiyeti Örneği</h1>
+        <h1>Zafiyetli Proje</h1>
         <form id="nameForm">
-            <input type="text" id="nameInput" placeholder="İsminizi girin" required>
+            <input type="text" id="nameInput" placeholder="Adınız?" required>
             <button type="submit">Gönder</button>
         </form>
         <div id="message" class="message"></div>
@@ -87,7 +87,7 @@
             const messageDiv = document.getElementById('message');
 
             // Kullanıcı girdisini doğrudan HTML'e ekleyerek XSS zafiyeti oluştur
-            messageDiv.innerHTML = `Merhaba, <strong>${nameInput}</strong>!`;
+            messageDiv.innerHTML = `Hoşgeldin, <strong>${nameInput}</strong>!`;
         });
     </script>
 </body>
